@@ -14,17 +14,24 @@ class  Blackjack
     puts 'Welcome to BlackJack'
     puts
   end
-  def compare 
-    if @player.cards.bust
+
+  def compare
+    if @player.blackjack
+      @player.bet.blackjack
+    elsif@player.cards.bust
+      puts "You had #{@player.cards.print} which is #{@player.cards.add}"
       puts 'LOSER'
       @player.bet.lose
     elsif @dealer.cards.bust
+      puts "You had #{@player.cards.print} which is #{@player.cards.add}"
       puts 'WINNER'
       @player.bet.win
     elsif @player.cards.add > @dealer.cards.add
+      puts "You had #{@player.cards.print} which is #{@player.cards.add}"
       puts 'WINNER'
       @player.bet.win
     elsif @player.cards.add < @dealer.cards.add
+      puts "You had #{@player.cards.print} which is #{@player.cards.add}"
       puts 'LOSER'
       @player.bet.lose
     else

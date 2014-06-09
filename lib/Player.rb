@@ -2,10 +2,8 @@
 require "hand"
 
 class Player
-  attr_accessor :cards, :bet, :move
-  def initialize(deck) 
-    # @deck = Deck.new
-    # @deck.shuffle!
+  attr_accessor :cards, :bet, :move, :blackjack
+  def initialize(deck)
     @cards = Hand.new
     @move = 'h'
     @bet = Betting.new
@@ -14,16 +12,18 @@ class Player
 
   def deal_player(deck)
     @cards.hand =[]
-    @ace = false
+    @cards.ace = false
+    @blackjack = false
     # @bust = false
     2.times {@cards.hit(deck)}
-    blackjack
+    blackjack?
   end
 
-  def blackjack
+  def blackjack?
     if @cards.add == 21
       @blackjack = true
       @move = 's'
+      @cards.print_hand
       puts 'WINNER WINNER CHICKEN DINNER!'
     end
   end
@@ -33,8 +33,9 @@ class Player
     @move = gets.chomp.to_s.downcase
     if @move == 'h'
       @cards.hit(deck)
+      @cards.add
     end
-    @cards.add
+
   end
 
   def playing(deck)
@@ -45,7 +46,6 @@ class Player
     while @move == 'h'
       @cards.print_hand
       hit_or_stay(deck)
-      @cards.ace
       if @cards.bust
         @cards.print_hand
         puts "You busted!"

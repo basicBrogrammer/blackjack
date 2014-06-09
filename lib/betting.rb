@@ -2,9 +2,11 @@
 class Betting
   attr_accessor :total, :bet
   def initialize
-    @total = 100 
+    @total = 100
   end
-
+  def blackjack
+    @total += @bet*3
+  end
   def bet_amt
     @bet = gets.chomp.to_i
   end

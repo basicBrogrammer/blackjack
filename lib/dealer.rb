@@ -3,7 +3,7 @@ class Dealer
   attr_accessor :cards, :bet, :move
   def initialize(deck)
     # @deck = Deck.new
-    # @deck.shuffle! 
+    # @deck.shuffle!
     @cards = Hand.new
     @move = 'h'
     @bet = Betting.new
@@ -33,6 +33,7 @@ class Dealer
     while @move == 'h'
       @cards.dealer_hand
       hit_or_stay(deck)
+      @cards.add
       if @cards.bust
         @cards.print_hand
         puts "Dealer busted!"
