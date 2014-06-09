@@ -1,6 +1,6 @@
 # Player file
 require "hand"
-
+ 
 class Player
   attr_accessor :cards, :bet, :move, :blackjack
   def initialize(deck)

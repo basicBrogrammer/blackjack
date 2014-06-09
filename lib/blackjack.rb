@@ -4,7 +4,6 @@ require "player"
 require "betting"
 require "dealer"
 
-
 class  Blackjack
   def initialize
     @deck = Deck.new

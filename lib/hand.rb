@@ -1,5 +1,6 @@
 # Hand
 require 'deck'
+
 class Hand
   attr_accessor :hand, :print, :sum, :bust, :ace
 

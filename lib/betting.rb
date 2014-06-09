@@ -1,6 +1,7 @@
 # betting
 class Betting
   attr_accessor :total, :bet
+  
   def initialize
     @total = 100
   end

@@ -1,5 +1,6 @@
 # dealer
 class Dealer
+  
   attr_accessor :cards, :bet, :move
   def initialize(deck)
     # @deck = Deck.new
