@@ -1,10 +1,8 @@
 # dealer
 class Dealer
-  
+
   attr_accessor :cards, :bet, :move
   def initialize(deck)
-    # @deck = Deck.new
-    # @deck.shuffle!
     @cards = Hand.new
     @move = 'h'
     @bet = Betting.new
@@ -12,7 +10,7 @@ class Dealer
 
   def deal_player(deck)
     @cards.hand =[]
-    @ace = false
+    @cards.ace = false
     2.times {@cards.hit(deck)}
   end
 

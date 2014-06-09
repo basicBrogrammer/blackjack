@@ -14,6 +14,7 @@ class Hand
   def hit(deck)
     @new_card = deck.draw
     @hand << @new_card
+    ace
   end
 
   def ace

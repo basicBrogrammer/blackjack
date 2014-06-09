@@ -1,6 +1,6 @@
 # Player file
 require "hand"
- 
+
 class Player
   attr_accessor :cards, :bet, :move, :blackjack
   def initialize(deck)
@@ -49,6 +49,7 @@ class Player
       if @cards.bust
         @cards.print_hand
         puts "You busted!"
+        puts
         @move = 's'
       end
     end

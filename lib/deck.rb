@@ -1,5 +1,5 @@
 require "card"
- 
+
 class Deck
   attr_accessor :deck
 
@@ -20,9 +20,12 @@ class Deck
   end
 
   def draw
-    if @deck.nil?
+    if cards_left <=1
       order
       shuffle!
+      puts
+      puts 'Shuffle!'
+      puts
     end
     @deck.shift
   end
@@ -35,7 +38,7 @@ class Deck
     @deck.shuffle!
   end
   def size
-    @deck.sizw
+    @deck.size
   end
 
 end

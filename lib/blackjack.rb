@@ -18,28 +18,39 @@ class  Blackjack
     if @player.blackjack
       @player.bet.blackjack
     elsif@player.cards.bust
+      puts
+      puts "You busted!"
       puts "You had #{@player.cards.print} which is #{@player.cards.add}"
       puts 'LOSER'
       @player.bet.lose
     elsif @dealer.cards.bust
+      puts
       puts "You had #{@player.cards.print} which is #{@player.cards.add}"
+      puts "Dealer had #{@dealer.cards.print} which is #{@dealer.cards.add}"
       puts 'WINNER'
       @player.bet.win
     elsif @player.cards.add > @dealer.cards.add
+      puts
       puts "You had #{@player.cards.print} which is #{@player.cards.add}"
+      puts "Dealer had #{@dealer.cards.print} which is #{@dealer.cards.add}"
       puts 'WINNER'
       @player.bet.win
     elsif @player.cards.add < @dealer.cards.add
+      puts
       puts "You had #{@player.cards.print} which is #{@player.cards.add}"
+      puts "Dealer had #{@dealer.cards.print} which is #{@dealer.cards.add}"
       puts 'LOSER'
       @player.bet.lose
     else
+      push
       puts 'Push'
     end
   end
+
   def play
 
     while @player.bet.total > 0
+
       @player.playing(@deck)
       if @player.cards.bust == false
         @dealer.playing(@deck)
