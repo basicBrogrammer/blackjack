@@ -48,7 +48,6 @@ class Player
       hit_or_stay(deck)
       if @cards.bust
         @cards.print_hand
-        puts "You busted!"
         puts
         @move = 's'
       end

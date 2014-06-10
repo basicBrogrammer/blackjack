@@ -14,6 +14,7 @@ class  Blackjack
     puts
   end
 
+# The following method "compare" uses if logic to decide whether the player or dealer wins
   def compare
     if @player.blackjack
       @player.bet.blackjack
@@ -42,11 +43,13 @@ class  Blackjack
       puts 'LOSER'
       @player.bet.lose
     else
-      push
+
       puts 'Push'
     end
   end
 
+# play: Calls the @player.playing method which goes through the playing logic for the player. Similarly,
+#the @dealer.playing method goes through the logic to automate the dealers play.
   def play
 
     while @player.bet.total > 0

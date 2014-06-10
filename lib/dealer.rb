@@ -1,4 +1,5 @@
 # dealer
+# contains all the logic for the dealers play to be automatic
 class Dealer
 
   attr_accessor :cards, :bet, :move
@@ -14,6 +15,8 @@ class Dealer
     2.times {@cards.hit(deck)}
   end
 
+# This method allows the dealers play to be automated. The dealer hits if Hand.add ( the sum of the cards in hand)
+# is less than 17
   def hit_or_stay(deck)
 
     if @cards.add <17
@@ -26,6 +29,7 @@ class Dealer
     end
   end
 
+# Plays through the dealers moves. Prints his hand after every hit, prints when the dealer bust
   def playing(deck)
     deal_player(deck)
     @move = 'h'

@@ -10,7 +10,7 @@ class Deck
     @deck = []
     order
   end
-
+# creates an array of @ranks and @suits
   def order
     @suits.each do |suit|
       @ranks.size.times do |i|
@@ -18,7 +18,7 @@ class Deck
       end
     end
   end
-
+# Shuffles the deck when the shoe is <=1 else the first element of the @deck array is shifted out
   def draw
     if cards_left <=1
       order
