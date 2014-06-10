@@ -9,9 +9,8 @@ You can run the file by:
 *** BUGS *** 
 ============================================================================================    
 
-I have fixed the following bugs. however, when I tried to push the documents to github, github.com hasn't updated. 
-1. I am currently working on fixing the double value nature of Aces. 
-2. I need to add blackjack into the betting.rb file as well as the player.rb file 
+Recent, double value (1 & 11) for aces, Blackjack, and shuffling empty deck has been fixed. 
+No known bugs. 
 
 **NEXT** 
 ============================================================================================    
