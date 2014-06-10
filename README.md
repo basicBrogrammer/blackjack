@@ -3,8 +3,8 @@ blackjack
 
 This program is a pseudo-simple Ruby Code to play Terminal Blackjack. 
 
-You can run the file by: \n
-    1. Open terminal and navigate to the directory\n
+You can run the file by:                                                                                                 
+    1. Open terminal and navigate to the directory                                                                          
     2. Once in the blackjack directory, enter: Ruby -Ilib /lib/blackjack.rb
 *** BUGS *** 
 ============================================================================================    
